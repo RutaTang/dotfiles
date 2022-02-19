@@ -1,0 +1,10 @@
+## bufferline.nvim
+Close Other buffers | <leader>bo
+Pick buffer         | <leader>bp
+Pick buffer close   | <leader>bc
+Move Next           | <leader>bl
+Move Prev           | <leader>bh
+
+## copilot.nvim
+Accept the current suggestion | <C-j>
+
