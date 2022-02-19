@@ -11,4 +11,8 @@ return {
   {"godlygeek/tabular"},
   -- markdown syntax highlighting and folding
   {"preservim/vim-markdown"},
+  -- web browser support as frontend of nvim
+  {"glacambre/firenvim",
+    run = function() vim.fn['firenvim#install'](0) end
+  },
 }
