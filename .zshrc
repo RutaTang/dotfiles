@@ -5,9 +5,6 @@
 BREW=/opt/homebrew/bin # Brew path
 export PATH=$BREW:$PATH
 
-# Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
