@@ -4,12 +4,16 @@ local M = {}
 
 
 local userPlugins = require "custom.plugins" -- path to table
+local pluginConfs = require "custom.plugins.configs" 
 
 M.plugins = {
   options = {
       lspconfig = {
          setup_lspconf = "custom.plugins.lspconfig",
       },
+   },
+   default_plugin_config_replace = {
+     nvim_tree = pluginConfs.nvimtree,
    },
    install = userPlugins
 }
