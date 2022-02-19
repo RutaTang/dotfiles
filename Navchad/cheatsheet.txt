@@ -1,0 +1,6 @@
+## bufferline.nvim
+Leave only one buffer | <leader>o
+
+## copilot.nvim
+Accept the current suggestion | <C-j>
+
