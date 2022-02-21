@@ -23,6 +23,9 @@ Delete                                     | d
 Refresh                                    | R
 Toggle visibility of hidden files          | I
 Toogle visibility of dotfile files         | H
+Cut file                                   | x
+Copy file                                  | c
+Paster file                                | p
 
 
 ## copilot.nvim
