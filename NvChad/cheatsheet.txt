@@ -5,6 +5,26 @@ Pick buffer close   | <leader>bc
 Move Next           | <leader>bl
 Move Prev           | <leader>bh
 
+## nvim-tree
+Open File, Directory                       | o
+Open with system App                       | s
+Open vertically                            | <C-v>
+Open horizontally                          | C-x>
+Open in new tab                            | <C-t>
+Preview file                               | <Tab>
+Enter the Directory                        | <C-]>
+Leave the Directory                        | -
+Close Opened Directory or Parent Directory | <BS>
+Rename                                     | r
+Copy name                                  | y
+Copy relative path                         | Y
+Copy absolute path                         | gy
+Delete                                     | d
+Refresh                                    | R
+Toggle visibility of hidden files          | I
+Toogle visibility of dotfile files         | H
+
+
 ## copilot.nvim
 Accept the current suggestion | <C-j>
 
