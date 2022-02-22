@@ -17,4 +17,6 @@ return {
   },
   -- CheatSheet
   {"sudormrfbin/cheatsheet.nvim"},
+  -- Emmet support
+  {"mattn/emmet-vim"},
 }
