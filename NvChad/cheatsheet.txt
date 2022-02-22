@@ -27,6 +27,8 @@ Cut file                                   | x
 Copy file                                  | c
 Paster file                                | p
 
+## telescope
+
 
 ## copilot.nvim
 Accept the current suggestion | <C-j>
