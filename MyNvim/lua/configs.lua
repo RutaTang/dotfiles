@@ -47,7 +47,7 @@ cmp.setup({
 
 -- <<< nvim-tree
 require'nvim-tree'.setup {
-	auto_close = true
+	auto_close = true,
 }
 -- >>> nvim-tree
 
