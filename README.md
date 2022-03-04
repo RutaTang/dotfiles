@@ -1,7 +1,8 @@
 # Terminal
 * **.zshrc**: for zsh
 
-# NeoVim
+# Neovim
+* **MyNvim Config (if use this, do not use NvChad)**	
 * **NavChad/custom**: 
   * **What**: For Navchad preconfiguration custom 
   * **How to use**: 
