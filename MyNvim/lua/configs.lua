@@ -58,7 +58,8 @@ vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevel = 99
 require'nvim-treesitter.configs'.setup {
 	highlight = {
-		enable = true
+		enable = true,
+		additional_vim_regex_highlighting = true,
 	},
 	incremental_selection = {
 		enable = true,
@@ -70,7 +71,7 @@ require'nvim-treesitter.configs'.setup {
 		}
 	},
 	indent = {
-		enable = true
+		enable = false, 
 	}
 }
 -- <<< nvim-treesitter
