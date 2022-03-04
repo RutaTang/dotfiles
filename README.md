@@ -3,6 +3,10 @@
 
 # Neovim
 * **MyNvim Config (if use this, do not use NvChad)**	
+	1. copy MyNvim/* to ~/.config/nvim/*
+	2. Download packer.nvim first
+	3. Run PackerSync
+	4. Works!
 * **NavChad/custom**: 
   * **What**: For Navchad preconfiguration custom 
   * **How to use**: 
