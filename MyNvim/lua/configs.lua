@@ -75,7 +75,3 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 -- <<< nvim-treesitter
-
--- >>> feline
-require('feline').setup()
--- <<< feline

@@ -41,7 +41,5 @@ return require('packer').startup(function()
 	use 'github/copilot.vim'
 	-- emmet
 	use 'mattn/emmet-vim'
-	-- feline: statusline
-	use 'feline-nvim/feline.nvim'
 end)
 
