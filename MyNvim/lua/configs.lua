@@ -80,3 +80,8 @@ require'nvim-treesitter.configs'.setup {
 -- >>> lualine.nvim
 require('lualine').setup()
 -- <<< lualine.nvim
+
+
+-- >>> lightspeed.nvim
+require'lightspeed'.setup{}
+-- <<< lightspeed.nvim

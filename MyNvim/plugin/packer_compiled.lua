@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/lualine.nvim",

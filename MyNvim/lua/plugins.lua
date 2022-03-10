@@ -46,5 +46,7 @@ return require('packer').startup(function()
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
+	-- fast motion: lightspeed.nvim
+	use 'ggandor/lightspeed.nvim'
 end)
 
