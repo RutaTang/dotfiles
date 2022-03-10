@@ -112,4 +112,14 @@ barbar_map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 barbar_map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- <<< barbar.nvim
 
+-- >>> terminal: toggleterm.nvim
+function _G.set_terminal_keymaps()
+  local opts = {noremap = true}
+  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+end
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
+-- <<< terminal: toggleterm.nvim
+
 return M

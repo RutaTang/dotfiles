@@ -88,7 +88,17 @@ require'lightspeed'.setup{}
 
 
 -- >>> toggleterm.nvim
-require("toggleterm").setup{}
+require("toggleterm").setup{
+	size = function(term)
+		if term.direction == "horizontal" then
+			return 15
+		elseif term.direction == "vertical" then
+			return vim.o.columns * 0.2
+		end
+	end,
+	direction = 'float',
+	open_mapping = [[<c-\>]],
+}
 -- <<< toggleterm.nvim
 
 -- >>> better-escape.nvim
