@@ -75,3 +75,8 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 -- <<< nvim-treesitter
+
+
+-- >>> lualine.nvim
+require('lualine').setup()
+-- <<< lualine.nvim
