@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/nvim-cmp",

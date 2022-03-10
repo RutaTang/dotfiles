@@ -76,6 +76,6 @@ require'nvim-treesitter.configs'.setup {
 }
 -- <<< nvim-treesitter
 
-
--- >>> barbar.nvim: tabs
--- <<< barbar.nvim
+-- >>> feline
+require('feline').setup()
+-- <<< feline
