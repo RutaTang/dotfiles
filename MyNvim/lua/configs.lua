@@ -85,3 +85,8 @@ require('lualine').setup()
 -- >>> lightspeed.nvim
 require'lightspeed'.setup{}
 -- <<< lightspeed.nvim
+
+
+-- >>> toggleterm.nvim
+require("toggleterm").setup{}
+-- >>> toggleterm.nvim

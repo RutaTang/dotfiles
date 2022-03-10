@@ -48,5 +48,7 @@ return require('packer').startup(function()
 	}
 	-- fast motion: lightspeed.nvim
 	use 'ggandor/lightspeed.nvim'
+	-- terminal: toggleterm.nvim
+	use {"akinsho/toggleterm.nvim"}
 end)
 
