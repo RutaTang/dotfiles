@@ -89,4 +89,8 @@ require'lightspeed'.setup{}
 
 -- >>> toggleterm.nvim
 require("toggleterm").setup{}
--- >>> toggleterm.nvim
+-- <<< toggleterm.nvim
+
+-- >>> better-escape.nvim
+require("better_escape").setup()
+-- <<< better-escape.nvim

@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["better-escape.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
+    url = "https://github.com/max397574/better-escape.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/catppuccin",

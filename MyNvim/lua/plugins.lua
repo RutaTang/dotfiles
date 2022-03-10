@@ -50,5 +50,7 @@ return require('packer').startup(function()
 	use 'ggandor/lightspeed.nvim'
 	-- terminal: toggleterm.nvim
 	use {"akinsho/toggleterm.nvim"}
+	-- escape: better-escape.nvim
+	use { "max397574/better-escape.nvim" }
 end)
 
