@@ -104,3 +104,10 @@ require("toggleterm").setup{
 -- >>> better-escape.nvim
 require("better_escape").setup()
 -- <<< better-escape.nvim
+
+-- >>> symbols-outline.nvim
+vim.g.symbols_outline = {
+	auto_preview = false,
+	width = 20
+}
+-- >>>

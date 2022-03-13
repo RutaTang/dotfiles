@@ -127,4 +127,9 @@ vim.api.nvim_set_keymap('n', '=gg', ':Neoformat<CR>', {noremap = true, silent = 
 vim.api.nvim_set_keymap('n', '=G', ':Neoformat<CR>', {noremap = true, silent = true})
 -- <<< NeoFormat
 
+
+-- >>> symbols-outline.nvim
+vim.api.nvim_set_keymap('n', '<leader>o', ':SymbolsOutline<CR>', {noremap = true, silent = true})
+-- <<< symbols-outline.nvim
+
 return M
