@@ -17,6 +17,8 @@ keymap_nnoremap_silent('<C-k>','<C-w>k')
 keymap_nnoremap_silent('<C-l>','<C-w>l')
 -- no highligh after searching
 keymap_nnoremap_silent('<ESC>',':nohl<CR>')
+-- save file
+vim.api.nvim_set_keymap('n','<C-s>',':w<CR>',{noremap=true,silent=true})
 -- <<< basic
 
 -- >>> nvim-tree
