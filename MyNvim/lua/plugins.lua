@@ -54,5 +54,7 @@ return require('packer').startup(function()
 	use { "max397574/better-escape.nvim" }
 	-- neoformt
 	use 'sbdchd/neoformat'
+	-- code outline: symbols-outline.nvim
+	use 'simrat39/symbols-outline.nvim'
 end)
 
