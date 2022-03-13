@@ -3,7 +3,7 @@ vim.o.relativenumber = true
 vim.o.fillchars='eob: '
 vim.cmd[[filetype plugin indent on]]
 vim.cmd[[set autoindent]]
-vim.cmd[[set tabstop=4]]
+vim.cmd[[set tabstop=2]]
 vim.cmd[[set shiftwidth=0]]
 vim.g.mapleader = " "
 -- <<< Basic
@@ -71,7 +71,7 @@ require'nvim-treesitter.configs'.setup {
 		}
 	},
 	indent = {
-		enable = true, 
+		enable = true,
 	}
 }
 -- <<< nvim-treesitter

@@ -52,5 +52,7 @@ return require('packer').startup(function()
 	use {"akinsho/toggleterm.nvim"}
 	-- escape: better-escape.nvim
 	use { "max397574/better-escape.nvim" }
+	-- neoformt
+	use 'sbdchd/neoformat'
 end)
 

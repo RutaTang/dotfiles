@@ -122,4 +122,9 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- <<< terminal: toggleterm.nvim
 
+-- >>> Neoformat
+vim.api.nvim_set_keymap('n', '=gg', ':Neoformat<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '=G', ':Neoformat<CR>', {noremap = true, silent = true})
+-- <<< NeoFormat
+
 return M
