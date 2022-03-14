@@ -108,6 +108,7 @@ require("better_escape").setup()
 -- >>> symbols-outline.nvim
 vim.g.symbols_outline = {
 	auto_preview = false,
-	width = 20
+	width = 20,
+	highlight_hovered_item = false
 }
 -- >>>
