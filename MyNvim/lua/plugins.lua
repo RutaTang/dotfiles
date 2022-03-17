@@ -60,5 +60,7 @@ return require('packer').startup(function()
   use 'antoinemadec/FixCursorHold.nvim'
 	-- indent line
 	use { "lukas-reineke/indent-blankline.nvim"}
+	-- auto pair
+	use 'windwp/nvim-autopairs'
 end)
 

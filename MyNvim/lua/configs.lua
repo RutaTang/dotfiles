@@ -132,3 +132,8 @@ require("indent_blankline").setup {
 	filetype_exclude = {'NvimTree'},
 }
 -- <<< indent-blankline.nvim
+
+
+-- >>> windwp/nvim-autopairs
+require('nvim-autopairs').setup{}
+-- <<< windwp/nvim-autopairs
