@@ -56,5 +56,9 @@ return require('packer').startup(function()
 	use 'sbdchd/neoformat'
 	-- code outline: symbols-outline.nvim
 	use 'simrat39/symbols-outline.nvim'
+	--  FixCursorHold.nvim: Fix CursorHold Performance
+  use 'antoinemadec/FixCursorHold.nvim'
+	-- indent line
+	use { "lukas-reineke/indent-blankline.nvim"}
 end)
 

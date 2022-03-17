@@ -109,6 +109,26 @@ require("better_escape").setup()
 vim.g.symbols_outline = {
 	auto_preview = false,
 	width = 20,
-	highlight_hovered_item = false
+	highlight_hovered_item = false,
+	preview_bg_highlight = "Pmenu",
 }
 -- >>>
+
+-- >>> FixCursorHold.nvim
+vim.g.cursorhold_updatetime = 100
+-- <<< FixCursorHold.nvim
+
+
+-- >>> indent-blankline.nvim
+vim.opt.termguicolors = true
+vim.cmd[[highlight IndentBlanklineContextChar guifg=#9FD4FD gui=nocombine]]
+
+vim.opt.list = true
+
+require("indent_blankline").setup {
+	space_char_blankline = " ",
+	show_current_context = true,
+	show_current_context_start = true,
+	filetype_exclude = {'NvimTree'},
+}
+-- <<< indent-blankline.nvim

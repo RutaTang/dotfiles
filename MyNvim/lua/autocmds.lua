@@ -1,6 +1,6 @@
 -- <<< nvim-tree
 -- open nivm tree automatically
-vim.cmd[[NvimTreeToggle]]
+vim.cmd[[au VimEnter * NvimTreeToggle]]
 -- >>> nvim-tree
 
 
