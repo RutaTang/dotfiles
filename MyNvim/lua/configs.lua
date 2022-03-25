@@ -178,3 +178,8 @@ require('Comment').setup{
 }
 -- <<< comment
 
+
+-- >>> neoformat
+vim.cmd("let g:neoformat_enabled_javascript = ['prettier']")
+-- <<< neoformat
+
