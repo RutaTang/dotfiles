@@ -16,6 +16,7 @@ vim.cmd[[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed o
 local catppuccin = require("catppuccin")
 catppuccin.setup()
 vim.cmd[[colorscheme catppuccin]]
+
 -- <<< Coloretheme 
 
 -- >>> nvim-lspconfig
