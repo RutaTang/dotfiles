@@ -6,6 +6,10 @@ vim.cmd[[set autoindent]]
 vim.cmd[[set tabstop=2]]
 vim.cmd[[set shiftwidth=0]]
 vim.g.mapleader = " "
+-- automatically reload file when it is changed outside of neovim
+vim.cmd[[set autoread]]
+vim.cmd[[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif]]
+vim.cmd[[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
 -- <<< Basic
 
 -- >>> Coloretheme 
