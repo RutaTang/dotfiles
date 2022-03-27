@@ -2,7 +2,7 @@ local keymappings = require('keymappings')
 -- Get setup config
 -- automatcally require all files inside lsp except init.lua
 -- and put these required into lsps
-local paths = vim.split(vim.fn.glob('~/.config/nvim/lua/*/*lua'),'\n')
+local paths = vim.split(vim.fn.glob('~/.config/nvim/lua/lsp/*.lua'),'\n')
 local lsps = {}
 for _,path in pairs(paths) do
 	local lsp_arr = vim.split(path,'/')
