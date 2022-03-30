@@ -10,6 +10,8 @@ vim.g.mapleader = " "
 vim.cmd[[set autoread]]
 vim.cmd[[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif]]
 vim.cmd[[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
+-- diagnostic
+vim.cmd[[set signcolumn=number]] -- show signs on line number
 -- <<< Basic
 
 -- >>> Coloretheme 
@@ -22,7 +24,7 @@ vim.cmd[[colorscheme catppuccin]]
 -- >>> nvim-lspconfig
 vim.diagnostic.config({
 	virtual_text = false, -- disable diagnostic as virtual text
-	signs = false, -- disable left side signs
+	-- signs = false, -- disable left side signs
 	float = {border = "single"} -- show border when float popups
 })
 -- show border box with hover
@@ -52,7 +54,7 @@ cmp.setup({
 
 -- <<< nvim-tree
 require'nvim-tree'.setup {
-	auto_close = true,
+	-- auto_close = true,
 }
 -- >>> nvim-tree
 
