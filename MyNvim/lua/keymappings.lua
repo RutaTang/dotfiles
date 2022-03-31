@@ -16,6 +16,12 @@ keymap_nnoremap_silent('<C-h>','<C-w>h')
 keymap_nnoremap_silent('<C-j>','<C-w>j')
 keymap_nnoremap_silent('<C-k>','<C-w>k')
 keymap_nnoremap_silent('<C-l>','<C-w>l')
+-- Window Sizing
+keymap_nnoremap_silent('-','<C-w>-')
+keymap_nnoremap_silent('+','<C-w>+')
+-- Window Splitting
+keymap_nnoremap_silent('<leader>hs',':split<CR>')
+keymap_nnoremap_silent('<leader>vs',':vsplit<CR>')
 -- no highligh after searching
 keymap_nnoremap_silent('<ESC>',':nohl<CR>')
 -- save file
@@ -47,7 +53,7 @@ M.on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+	-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
