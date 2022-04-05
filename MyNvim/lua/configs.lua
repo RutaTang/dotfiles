@@ -12,6 +12,9 @@ vim.cmd[[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' 
 vim.cmd[[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
 -- diagnostic
 vim.cmd[[set signcolumn=number]] -- show signs on line number
+-- terminal
+vim.cmd[[set termguicolors]]
+vim.cmd[[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
 -- <<< Basic
 
 -- >>> Coloretheme 
@@ -113,11 +116,11 @@ require("toggleterm").setup{
 		if term.direction == "horizontal" then
 			return 15
 		elseif term.direction == "vertical" then
-			return vim.o.columns * 0.2
+			return vim.o.columns * 0.5
 		end
 	end,
-	direction = 'float',
-	open_mapping = [[<c-\>]],
+	-- direction = 'float',
+	-- open_mapping = [[<c-\>]],
 }
 -- <<< toggleterm.nvim
 

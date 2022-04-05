@@ -27,3 +27,4 @@ for _,v in pairs(lsps) do
 	common_setups(v.setup)
 	require('lspconfig')[v.name].setup(v.setup)
 end
+
