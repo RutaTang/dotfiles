@@ -136,6 +136,7 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm size=15 direction=horizontal<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>at', ':ToggleTermToggleAll<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('x', '<leader>t', ':ToggleTermSendVisualLine<CR>', {noremap = true, silent = true})
 
 -- <<< terminal: toggleterm.nvim
 
