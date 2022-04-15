@@ -7,5 +7,5 @@
 3. Run PackerSync
 4. Works!
 
-![Nvim Demo](/readme_imgs/nvim.png)
+![Nvim Demo](/readme_imgs/nvim-min.png)
 
