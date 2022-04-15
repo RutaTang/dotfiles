@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
     url = "https://github.com/antoinemadec/FixCursorHold.nvim"
   },
-  LuaSnip = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -99,30 +94,10 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  ["cmp-buffer"] = {
+  ["coc.nvim"] = {
     loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
   },
   ["copilot.vim"] = {
     loaded = true,
@@ -158,16 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
-  },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },

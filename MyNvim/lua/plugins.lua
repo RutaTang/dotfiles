@@ -14,15 +14,6 @@ return require('packer').startup(function()
 		"catppuccin/nvim",
 		as = "catppuccin"
 	}
-	-- LSP
-	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
-	use 'L3MON4D3/LuaSnip'
-	use 'saadparwaiz1/cmp_luasnip'
 	-- tree sitter
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	-- telescop: fuzy searrcg
@@ -54,8 +45,6 @@ return require('packer').startup(function()
 	use { "max397574/better-escape.nvim" }
 	-- neoformt
 	use 'sbdchd/neoformat'
-	-- code outline: symbols-outline.nvim
-	use 'simrat39/symbols-outline.nvim'
 	--  FixCursorHold.nvim: Fix CursorHold Performance
   use 'antoinemadec/FixCursorHold.nvim'
 	-- indent line
@@ -65,5 +54,7 @@ return require('packer').startup(function()
 	-- comment
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use 'numToStr/Comment.nvim'
+	-- LSP
+	use {'neoclide/coc.nvim', branch = 'release'}
 end)
 
