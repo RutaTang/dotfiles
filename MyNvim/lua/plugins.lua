@@ -53,8 +53,16 @@ return require('packer').startup(function()
 	use 'windwp/nvim-autopairs'
 	-- comment
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
-	use 'numToStr/Comment.nvim'
+	use 'terrortylor/nvim-comment'
 	-- LSP
 	use {'neoclide/coc.nvim', branch = 'release'}
+	-- fold
+	use{ 'anuvyklack/pretty-fold.nvim',
+   config = function()
+      require('pretty-fold').setup()
+      require('pretty-fold.preview').setup()
+   end
+}
+
 end)
 

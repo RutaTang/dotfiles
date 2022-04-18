@@ -89,7 +89,6 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm size=10 direction=horizontal<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>at', ':ToggleTermToggleAll<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('x', '<leader>t', ':ToggleTermSendVisualLine<CR>', {noremap = true, silent = true})
-
 -- <<< terminal: toggleterm.nvim
 
 -- >>> Neoformat
@@ -99,6 +98,33 @@ vim.api.nvim_set_keymap('n', '=G', ':Neoformat<CR>', {noremap = true, silent = t
 
 -- >>> coc.nvim: for LSP
 vim.api.nvim_set_keymap('n', '<leader>o', ":call CocAction('showOutline')<CR>", {noremap = true, silent = true})
+-- use <CR> to chose completion
+vim.api.nvim_set_keymap('i', '<CR>', [[ pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], {noremap=true, expr= true, silent = true})
+-- code navigation
+vim.api.nvim_set_keymap('n', 'gd', '<Plug>(coc-definition)' , {silent = true})
+vim.api.nvim_set_keymap('n', 'gy', '<Plug>(coc-type-definition)' , {silent = true})
+vim.api.nvim_set_keymap('n', 'gi', '<Plug>(coc-implementation)' , {silent = true})
+vim.api.nvim_set_keymap('n', 'gr', '<Plug>(coc-references)' , {silent = true})
+-- show documentation in preview window
+function coc_show_document()
+	vim.api.nvim_exec([[
+	if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+	]], true)
+end
+vim.api.nvim_set_keymap('n', 'K', ':lua coc_show_document()<CR>', {noremap = true, silent = true})
+-- symbol renaming
+vim.api.nvim_set_keymap('n', '<leader>rn', '<Plug>(coc-rename)',{})
+-- code action
+vim.api.nvim_set_keymap('n', '<leader>ca', '<Plug>(coc-codeaction)',{silent=true})
+vim.api.nvim_set_keymap('x', '<leader>ca', '<Plug>(coc-codeaction-selected)',{silent=true})
+-- quick fix
+vim.api.nvim_set_keymap('n', '<leader>qf', '<Plug>(coc-fix-current)',{})
 -- <<< coc.nvim: for LSP
 
 return M
