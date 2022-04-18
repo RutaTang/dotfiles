@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["move.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/move.nvim",
+    url = "https://github.com/fedepujol/move.nvim"
+  },
   neoformat = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/neoformat",

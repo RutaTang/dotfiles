@@ -58,11 +58,13 @@ return require('packer').startup(function()
 	use {'neoclide/coc.nvim', branch = 'release'}
 	-- fold
 	use{ 'anuvyklack/pretty-fold.nvim',
-   config = function()
-      require('pretty-fold').setup()
-      require('pretty-fold.preview').setup()
-   end
-}
+		config = function()
+			require('pretty-fold').setup()
+			require('pretty-fold.preview').setup()
+		end
+	}
+	-- move line quickly
+	use 'fedepujol/move.nvim'
 
 end)
 

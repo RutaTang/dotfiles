@@ -127,4 +127,16 @@ vim.api.nvim_set_keymap('x', '<leader>ca', '<Plug>(coc-codeaction-selected)',{si
 vim.api.nvim_set_keymap('n', '<leader>qf', '<Plug>(coc-fix-current)',{})
 -- <<< coc.nvim: for LSP
 
+-- >>> move.nvim
+-- the weird symbols may depend on your OS, triangle here is like <A-j>
+vim.api.nvim_set_keymap('n', '∆', ":MoveLine(1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '˚', ":MoveLine(-1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '∆', ":MoveBlock(1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '˚', ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '¬', ":MoveHChar(1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '˙', ":MoveHChar(-1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '¬', ":MoveHBlock(1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '˙', ":MoveHBlock(-1)<CR>", { noremap = true, silent = true })
+-- <<< move.nvim
+
 return M
