@@ -39,8 +39,6 @@ return require('packer').startup(function()
 	}
 	-- fast motion: lightspeed.nvim
 	use 'ggandor/lightspeed.nvim'
-	-- terminal: toggleterm.nvim
-	use {"akinsho/toggleterm.nvim"}
 	-- escape: better-escape.nvim
 	use { "max397574/better-escape.nvim" }
 	-- neoformt
@@ -65,6 +63,11 @@ return require('packer').startup(function()
 	}
 	-- move line quickly
 	use 'fedepujol/move.nvim'
-
+	-- terminal
+	use {"akinsho/toggleterm.nvim"}
+	-- pick line: numb.nvim
+	use 'nacro90/numb.nvim'
+	-- show registers: registers.nvim
+	use "tversteeg/registers.nvim"
 end)
 

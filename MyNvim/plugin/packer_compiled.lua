@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/numb.nvim",
+    url = "https://github.com/nacro90/numb.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -175,6 +180,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
     url = "https://github.com/anuvyklack/pretty-fold.nvim"
+  },
+  ["registers.nvim"] = {
+    loaded = true,
+    path = "/Users/ruta/.local/share/nvim/site/pack/packer/start/registers.nvim",
+    url = "https://github.com/tversteeg/registers.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

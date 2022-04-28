@@ -74,23 +74,6 @@ barbar_map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 barbar_map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- <<< barbar.nvim
 
--- >>> terminal: toggleterm.nvim
-function _G.set_terminal_keymaps()
-  local opts = {noremap = true}
-  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
-	vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
-end
--- if you only want these mappings for toggle term use term://*toggleterm#* instead
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm size=10 direction=horizontal<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>at', ':ToggleTermToggleAll<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('x', '<leader>t', ':ToggleTermSendVisualLine<CR>', {noremap = true, silent = true})
--- <<< terminal: toggleterm.nvim
-
 -- >>> Neoformat
 vim.api.nvim_set_keymap('n', '=gg', ':Neoformat<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '=G', ':Neoformat<CR>', {noremap = true, silent = true})
@@ -125,6 +108,13 @@ vim.api.nvim_set_keymap('n', '<leader>ca', '<Plug>(coc-codeaction)',{silent=true
 vim.api.nvim_set_keymap('x', '<leader>ca', '<Plug>(coc-codeaction-selected)',{silent=true})
 -- quick fix
 vim.api.nvim_set_keymap('n', '<leader>qf', '<Plug>(coc-fix-current)',{})
+-- remap <C-f> and <C-b> for scroll float windows/popups.
+vim.cmd[[nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"]]
+vim.cmd[[nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"]]
+vim.cmd[[inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"]]
+vim.cmd[[inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"]]
+vim.cmd[[vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"]]
+vim.cmd[[vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"]]
 -- <<< coc.nvim: for LSP
 
 -- >>> move.nvim
@@ -139,4 +129,20 @@ vim.api.nvim_set_keymap('v', '¬', ":MoveHBlock(1)<CR>", { noremap = true, silen
 vim.api.nvim_set_keymap('v', '˙', ":MoveHBlock(-1)<CR>", { noremap = true, silent = true })
 -- <<< move.nvim
 
+-- >>> toggleterm.nvim
+vim.cmd[[nnoremap <silent><leader>t <Cmd>exe v:count1 . "ToggleTerm"<CR>]]
+vim.api.nvim_set_keymap('n', '<leader>at', ":ToggleTermToggleAll<CR>", { noremap = true, silent = true })
+-- vim.cmd[[inoremap <silent><leader>t <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>]]
+function _G.set_terminal_keymaps()
+  local opts = {noremap = true}
+  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
+end
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+-- <<< toggleterm.nvim
 return M

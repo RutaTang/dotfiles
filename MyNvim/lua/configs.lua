@@ -21,7 +21,6 @@ vim.cmd[[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
 local catppuccin = require("catppuccin")
 catppuccin.setup()
 vim.cmd[[colorscheme catppuccin]]
-
 -- <<< Coloretheme 
 
 -- <<< nvim-tree
@@ -55,7 +54,7 @@ require'nvim-treesitter.configs'.setup {
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
-  }
+  },
 }
 -- <<< nvim-treesitter
 
@@ -69,20 +68,6 @@ require('lualine').setup()
 require'lightspeed'.setup{}
 -- <<< lightspeed.nvim
 
-
--- >>> toggleterm.nvim
-require("toggleterm").setup{
-	size = function(term)
-		if term.direction == "horizontal" then
-			return 10
-		elseif term.direction == "vertical" then
-			return vim.o.columns * 0.5
-		end
-	end,
-	-- direction = 'float',
-	-- open_mapping = [[<c-\>]],
-}
--- <<< toggleterm.nvim
 
 -- >>> better-escape.nvim
 require("better_escape").setup()
@@ -127,3 +112,14 @@ require("nvim_comment").setup({
   end,
 })
 -- <<< nvim-comment
+
+-- >>> numb.nvim
+require('numb').setup()
+-- <<< numb.nvim
+
+-- >>> toggleterm.nvim
+require("toggleterm").setup{
+	size = 12,
+	direction = "horizontal",
+}
+-- <<< toggleterm.nvim
