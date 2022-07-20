@@ -18,7 +18,15 @@ local config = {
             relativenumber = true -- sets vim.opt.relativenumber
         },
         g = {
-            mapleader = " " -- sets vim.g.mapleader
+            mapleader = " ", -- sets vim.g.mapleader
+            vimtex_view_method = "skim",
+            vimtex_quickfix_open_on_warning = 0,
+            copilot_no_tab = true, -- not use tab
+            copilot_assume_mapped = true, --  customize copilot accpect
+        },
+        o = {
+            foldmethod = "indent",
+            foldlevelstart = 99
         }
     },
     -- Default theme configuration
@@ -71,8 +79,14 @@ local config = {
                     require("numb").setup()
                 end
             },
+            -- latex
+            {
+                "lervag/vimtex"
+            },
             -- copilot: AI code helper
-            {"github/copilot.vim"}
+            {
+                "github/copilot.vim",
+            }
         },
         -- All other entries override the setup() call for default plugins
         treesitter = {
@@ -121,6 +135,7 @@ local config = {
                 end,
                 {"i", "s"}
             )
+            opts.mapping["<CR>"] = cmp.mapping.confirm {select = false}
             return opts
         end
     },
@@ -154,6 +169,11 @@ local config = {
                     ["G"] = {":Neoformat<CR>", "Format"},
                     ["gg"] = {":Neoformat<CR>", "Format"}
                 }
+            },
+            i = {
+                ["<C-i>"] = {[[copilot#Accept("<CR>")]], "Accpet AI assistant",silent=true,expr=true},
+                ["<C-]>"] = {[[<Plug>(copilot-next)]], "Next AI assistant",silent=true},
+                ["<C-[>"] = {[[<Plug>(copilot-previous)]], "Previous AI assistant",silent=true}
             }
         }
     },
